@@ -1,3 +1,5 @@
+after download the project
+
 ## step1.
 npm install
 
@@ -9,14 +11,14 @@ npx cap add android
 npx cap sync
 
 
-## step3.
+## step4.
 npx cap open android
 
 
-## step4.
+## step5.
 when android studio open,
 connect device with USB
  
  
-## step5. 
+## step6. 
 click Green triangle "run" to install apk in your device
