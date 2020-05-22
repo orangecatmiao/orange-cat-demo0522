@@ -1,0 +1,12 @@
+{
+  "appId": "com.example.app",
+  "appName": "demo0522",
+  "bundledWebRuntime": true,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

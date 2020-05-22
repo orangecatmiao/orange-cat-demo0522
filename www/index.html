@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Capacitor App</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+
+
+</head>
+<body>
+  <div class="" style="width: 100%;margin-top: 50px;">
+    <div class="m-btn s1" onclick="openScaner()">開啟</div>
+    <div class="m-btn s1" onclick="stopScaner()">關閉</div>
+    <div class="m-btn s2" onclick="enableLight()">開啟燈光</div>
+    <div class="m-btn s2" onclick="disableLight()">關閉燈光</div>
+ </div>
+</body>
+</html>
+
+<script>
+  function openScaner(){
+    QRScanner.scan(displayContents);
+    QRScanner.show();
+  }
+
+  function stopScaner(){
+    QRScanner.destroy(function(status){
+      console.log(status);
+    });
+  }
+
+  function enableLight(){
+    QRScanner.enableLight();
+  }
+
+  function disableLight(){
+    QRScanner.disableLight();
+  }
+
+
+
+  function displayContents(err, text){
+    if(err){
+    } else {
+      alert(text);
+    }
+ }
+</script>
+<style>
+  .m-btn{
+    margin-top: 10px;
+   
+    border-radius: 5px;
+    width: 150px;
+    color: cornsilk;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .s1{  background: cornflowerblue; }
+  .s2{  background: rgb(106, 170, 21); }
+</style>
